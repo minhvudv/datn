@@ -1,0 +1,266 @@
+.phandau{   
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    margin-bottom: 22px;
+    position: fixed;
+    z-index: 100055;
+    margin-top: -100px;
+  
+    }
+    .logo{
+    width: 15%;
+    height: 100px;
+    box-sizing: border-box;
+    float: left;
+    }
+    .logo>img{
+    width: 100%;
+    height: 100%;
+    }
+    .menu{
+    width: 60%;
+    height: 100px;
+    float: left;
+    box-sizing: border-box;
+    background-color: black;
+    }
+    .phandau > i{
+    color: white;
+    display: none;
+    margin-left: 25px;
+    }
+    .phandau>.menu>ul>li{
+    list-style-type: none;
+    display: inline-block;
+    line-height: 67px;
+
+    }
+    .menu > ul{
+    display: flex;
+    }
+    .phandau>.menu> ul > li:first-child >a{
+    color: red ;
+    }
+    .phandau>.menu>ul>li>a{
+    text-decoration: none;
+    color:white;
+    font-size:15px ;
+    font-weight: bold;
+    margin-left: 40px;
+    }
+    .phandau > .menu > ul > li > a:hover{
+    color: red;
+    }
+    .phandau>.menu>ul>li>ul {
+        display: none;  
+    }
+    .sanpham{
+    width: 170px;
+    height: 150px;
+    background-color: white;
+    border: 1px solid black;
+    display: none;
+    margin-top: 0px;
+    position: absolute;
+    border-radius: 6px 6px ;
+    box-shadow: 3px 3px 3px  black;
+    }
+    .phandau>.menu>ul> li:hover .sanpham{
+    display: block;
+    }
+    .menu > ul > li > ul   {
+    list-style-type: none;
+    }
+    .menu>ul> li > ul a {
+    text-decoration: none;
+    color: black;
+    }
+    .sanpham>li :hover {
+    background-color: red;
+
+    }
+    .sanpham>li {
+    line-height: 50px;
+    }
+    .menu > ul > li:hover .sanpham{
+    display: block;
+    }
+    .dichvu{
+        /* margin-top: -25px; */
+        width: 100%;
+        height: 140px;
+        background-color: rgb(169, 168, 168);
+        margin-top: 100px;
+       
+    }
+    .hehe{
+    
+        margin: auto;
+        height: 140px;
+        width: 70%;
+        line-height: 30px;
+    
+        
+    }
+    .hehe h1{
+        padding-top: 30px;
+        
+    }
+    .hehe a{
+        text-decoration: none;
+        color: red;
+        font-weight: bold;
+    }
+    .phanthan{
+      
+        margin: auto;
+        margin-top: 50px;
+        width: 72%;
+        height: 480px;
+        /* border: 1px solid black; */
+    }
+    .phanthan >.dangky{
+        float: left;
+        width: 46%;
+        height:380px;
+        /* border: 1px solid black; */
+        margin: 13px;
+        margin-top: 40px;
+    }
+    .phanthan >.dangky img{
+        width: 100%;
+        height: 100%;
+       
+    }
+    
+
+ 
+    .phanthan>.thongtin{
+        width: 46%;
+        height:470px;
+        /* border: 1px solid black; */
+        /* margin: 10px; */
+        float: right;
+    }
+    .thongtin p{
+        
+        font-size: 19px;
+    }
+    .thongtin button{
+        width: 110px;
+        height: 40px;
+        float: left;
+        background-color: yellowgreen;
+        border-radius: 10px;
+    }
+    .khung{
+      
+        width: 72%;
+      
+        border: 1px solid black;
+
+        margin-top: 20px;
+        margin: auto;
+    }
+    .khung > .khung1{
+        width: 97%;
+        margin: auto;
+        height: 50px;
+        /* border: 1px solid black; */
+      
+    }
+    .khung > .khung1 h2{
+        border-left: 4px solid yellowgreen;
+    }
+    .khung > .khung2{
+        width: 97%;
+        height: 130px;
+        /* border: 1px solid black; */
+        margin: auto;
+
+    }
+  
+    .khung > .khung2 h1{
+        color: yellowgreen;
+        text-align: center;
+    }
+    .khung >.khung3{
+        width: 97%;
+        height: 500px;
+        margin: auto;
+    }
+    .khung > .khung3 img{
+        width: 100%;
+        height: 500px;
+    }
+    .khung >.khung4{
+        width: 97%;
+        height: 150px;
+        margin: auto;
+    }
+    .khung > .khung4 h2,h3 {
+        color: rgb(115, 172, 1);
+    }
+    .khung >.khung5{
+        width: 97%;
+        margin: auto;
+        height: 120px;
+       /* border: 1px solid black;*/
+    }
+    .khung > .khung6{
+        margin: auto;
+        width: 97%;
+        height: 180px;
+        border: 1px solid black;
+    }
+   
+ 
+    .khung >.anh4{
+        margin: auto;
+        margin-top: 10px;
+        width: 97%;
+        height: 220px;
+        border: 1px solid black;
+    }
+    .khung >.anh4 img{
+        width: 100%;
+        height: 100%;
+    }
+   
+    .khung >.khung9 button {
+        color: white;
+        background-color: blue;
+        width:100px;
+        height: 30px;
+        border-radius: 7px;
+    }
+    .anhcuoi{
+        margin-top: 10px;
+        width: 100%;
+        height: 450px;
+        border: 2px solid red;
+    }
+    .anhcuoi img{
+        width: 100%;
+        height: 100%;
+    }
+    .khung10{
+        width: 100%;
+        height: 100px;
+        background-color: rgb(202, 211, 220);
+    }
+    .khung10>.theodoi{
+        
+        text-align: center;
+        height: 50px;
+        padding-top: 20px;
+    }
+    .khung10 >.theodoi > a{
+        color: black;
+    }
+
+
+    
+   
+ 

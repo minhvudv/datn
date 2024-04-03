@@ -1,0 +1,36 @@
+<div class="col-lg-8 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <strong>Thêm Sản Phẩm</strong> 
+        </div>
+        <div class="card-body card-block">
+            <form  method="put" [formGroup]="suablog" (submit)="onUpdateblog()">
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="TenBlog" >Tên Blog</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="TenBlog" formControlName="TenBlog" placeholder="TenBlog" class="form-control"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="AnhBlog" >Ảnh Blog</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="AnhBlog" formControlName="AnhBlog" placeholder=" AnhBlog" class="form-control"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="TomTat" >Tóm Tắt</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="TomTat" formControlName="TomTat" placeholder=" TomTat" class="form-control"></div>
+                </div>
+                
+            
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="NoiDung" >Nội Dung</label></div>
+                    <div class="col-12 col-md-9"><textarea formControlName="NoiDung" id="NoiDung" rows="9" placeholder="NoiDung." class="form-control"></textarea></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="NguoiDang" >Người Đăng</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="NguoiDang" formControlName="NguoiDang" placeholder=" NguoiDang" class="form-control"></div>
+                </div>
+            
+                <div class="form-group text-right">
+                    <button type="submit" class="btn btn-primary">Sửa</button>
+                </div>
+            </form>
+        </div>
+    </div>

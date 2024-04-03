@@ -1,0 +1,184 @@
+<div class="content">
+    <!-- Animated -->
+    <div class="animated fadeIn">
+        <!-- Widgets  -->
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-1">
+                                <i class="pe-7s-cash"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text">VNĐ <span class="count"> 0</span></div>
+                                    <div class="stat-heading">Doanh thu</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-2">
+                                <i class="pe-7s-cart"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">0</span></div>
+                                    <div class="stat-heading">Đã bán</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-3">
+                                <i class="pe-7s-browser"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">0</span></div>
+                                    <div class="stat-heading">Kho</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="stat-widget-five">
+                            <div class="stat-icon dib flat-color-4">
+                                <i class="pe-7s-users"></i>
+                            </div>
+                            <div class="stat-content">
+                                <div class="text-left dib">
+                                    <div class="stat-text"><span class="count">0</span></div>
+                                    <div class="stat-heading">Người dùng</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Widgets -->
+      
+        <div class="clearfix"></div>
+        <!-- Orders -->
+        <div class="orders">
+            <div class="row">
+                <div class="col-xl-8">
+                    <!-- <div class="card">
+                        <div class="card-body">
+                            <h4 class="box-title">Đơn hàng </h4>
+                        </div>
+                        <div class="card-body--">
+                            <div class="table-stats order-table ov-h">
+                                <table class="table ">
+                                    <thead>
+                                        <tr>
+                                            <th class="serial">Stt</th>
+                                            <th>ID</th>
+                                            <th>Họ tên</th>
+                                            <th>Sản phẩm</th>
+                                            <th>Số lượng</th>
+                                            <th>Thông tin</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="serial">1.</td>
+                                            <td> #5469 </td>
+                                            <td>  <span class="name">Đạt</span> </td>
+                                            <td> <span class="product">Arabica</span> </td>
+                                            <td><span class="count">1</span></td>
+                                            <td>
+                                                <span class="badge badge-complete">Hoàn thành</span>
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div> 
+                        </div>
+                    </div>  -->
+                </div>  <!-- /.col-lg-8 -->
+
+                 <!-- /.col-md-4 -->
+            </div>
+        </div>
+        <!-- /.orders -->
+
+
+        <!-- Modal - Calendar - Add New Event -->
+        <div class="modal fade none-border" id="event-modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"><strong>Add New Event</strong></h4>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success save-event waves-effect waves-light">Create event</button>
+                        <button type="button" class="btn btn-danger delete-event waves-effect waves-light" data-dismiss="modal">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#event-modal -->
+        <!-- Modal - Calendar - Add Category -->
+        <div class="modal fade none-border" id="add-category">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title"><strong>Add a category </strong></h4>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="control-label">Category Name</label>
+                                    <input class="form-control form-white" placeholder="Enter name" type="text" name="category-name"/>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="control-label">Choose Category Color</label>
+                                    <select class="form-control form-white" data-placeholder="Choose a color..." name="category-color">
+                                        <option value="success">Success</option>
+                                        <option value="danger">Danger</option>
+                                        <option value="info">Info</option>
+                                        <option value="pink">Pink</option>
+                                        <option value="primary">Primary</option>
+                                        <option value="warning">Warning</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger waves-effect waves-light save-category" data-dismiss="modal">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- /#add-category -->
+    </div>
+    <!-- .animated -->
+</div>

@@ -1,0 +1,19 @@
+<div class="col-lg-8 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <strong>Thêm Loại Sản Phẩm</strong> 
+        </div>
+        <div class="card-body card-block">
+            <form  method="POST" [formGroup]="themmoiloaisp" (submit)="onAddloaisp()">
+                
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="TenLH" >Tên Loại Sản Phẩm</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="TenLH" formControlName="TenLH" placeholder=" TenLH" class="form-control"></div>
+                </div>
+               
+                <div class="form-group text-right">
+                    <button type="submit" class="btn btn-primary">Thêm Mới</button>
+                </div>
+            </form>
+        </div>
+    </div>

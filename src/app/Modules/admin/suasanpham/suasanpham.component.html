@@ -1,0 +1,50 @@
+<div class="col-lg-8 mx-auto">
+    <div class="card" >
+        <div class="card-header">
+            <strong>Sửa Sản Phẩm</strong> 
+        </div>
+        <div class="card-body card-block">
+            <form  method="put" [formGroup]="suasanpham" (submit)="onUpdate()">
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="LoaiHangID" >Loại Sản Phẩm</label></div>
+                    <div class="col-12 col-md-9"><input type="number" id="LoaiHangID" formControlName="LoaiHangID" placeholder="LoaiHangID" class="form-control"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="TenSanPham" >Tên Sản Phẩm</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="TenSanPham" formControlName="TenSanPham" placeholder=" TenSanPham" class="form-control"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="AnhSanPham" >Ảnh Sản Phẩm</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="AnhSanPham" formControlName="AnhSanPham" placeholder=" AnhSanPham" class="form-control"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="GiaBan" >Giá Bán</label></div>
+                    <div class="col-12 col-md-9"><input type="number" id="GiaBan" formControlName="GiaBan" placeholder="GiaBan"  class="form-control"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="Giong" >Giống Cây</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="Giong" formControlName="Giong" placeholder=" Giong" class="form-control"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="PhuongPhapSoChe" >Phương Pháp Sơ Chế</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="PhuongPhapSoChe" formControlName="PhuongPhapSoChe" placeholder=" PhuongPhapSoChe" class="form-control"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="DoCaoTrong" >Độ Cao Trồng</label></div>
+                    <div class="col-12 col-md-9"><input type="number" id="DoCaoTrong" formControlName="DoCaoTrong" placeholder=" DoCaoTrong" class="form-control"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="MucRang" >Mức Rang</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="MucRang" formControlName="MucRang" placeholder=" MucRang" class="form-control"></div>
+                </div>
+            
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="HuongVi" >Hương Vị</label></div>
+                    <div class="col-12 col-md-9"><textarea formControlName="HuongVi" id="HuongVi" rows="9" placeholder="HuongVi." class="form-control"></textarea></div>
+                </div>
+                <div class="form-group text-right">
+                    <button type="submit" class="btn btn-primary" >Cập Nhật</button>
+                </div>
+            </form>
+        </div>
+    </div>

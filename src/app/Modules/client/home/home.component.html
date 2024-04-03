@@ -1,0 +1,152 @@
+
+		<!-- Start Hero Section -->
+        <div class="hero">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-5">
+                        <div class="intro-excerpt">
+                            <h1>Life is a big lab
+                                do not be afraid of tiny explosions!</h1>
+                            <p><a href="./client/shop" class="btn btn-secondary me-2">Mua Ngay</a><a href="./client/about" class="btn btn-white-outline">Khám Phá</a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="hero-img-wrap">
+                            <img src="/assets/client/images/couch1.jpg" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- End Hero Section -->
+
+    <!-- Start Product Section -->
+    <div class="product-section">
+        <div class="container">
+            <div class="row">
+
+                <!-- Start Column 1 -->
+                <div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
+                    <h2 class="mb-4 section-title">Trải nghiệm hương vị cà phê đặc sản tại nhà!</h2>
+                    <p class="mb-4">#monocoffeebottle #monocoffeelab </p>
+                    <p><a href="./client/shop" class="btn">Khám Phá</a></p>
+                </div> 
+                <!-- End Column 1 -->
+
+                <!-- Start Column 2 -->
+                <div *ngFor="let spm of sanphammoi" class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+                    <a class="product-item" href="./client/details/{{ spm.SanPhamID }}">
+                        <img src="/assets/client/images/{{ spm.AnhSanPham }}" class="img-fluid product-thumbnail">
+                        <h3 class="product-title">{{ spm.TenSanPham }}</h3>
+                        <strong class="product-price">{{ spm.GiaBan | number: '1.0-0' }} đ</strong>
+                        <span class="icon-cross">
+                            <img src="/assets/client/images/cross.svg" class="img-fluid" >
+                        </span>
+                    </a>
+                </div> 
+               
+                <!-- End Column 2 -->
+
+               
+
+            </div>
+        </div>
+    </div>
+    <!-- End Product Section -->
+
+    <!-- Start Why Choose Us Section -->
+    <div class="why-choose-section">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-6">
+                    <h2 class="section-title">Tại sao chọn chúng tôi</h2>
+
+                    <div class="row my-5">
+                        <div class="col-6 col-md-6">
+                            <div class="feature">
+                                <div class="icon">
+                                    <img src="/assets/client/images/truck.svg" alt="Image" class="imf-fluid">
+                                </div>
+                                <h3>Giao hàng nhan &amp; Miễn phí</h3>
+                                <p>Mono áp dụng freeship cho tất cả các khách hàng trên toàn quốc.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-6">
+                            <div class="feature">
+                                <div class="icon">
+                                    <img src="/assets/client/images/bag.svg" alt="Image" class="imf-fluid">
+                                </div>
+                                <h3>Dễ dàng mua sắm</h3>
+                                <p>Chúng mình đã có mặt tại nhiều sàn thương mại điện tử.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-6">
+                            <div class="feature">
+                                <div class="icon">
+                                    <img src="/assets/client/images/support.svg" alt="Image" class="imf-fluid">
+                                </div>
+                                <h3>Hỗ trợ 24/7</h3>
+                                <p>Bạn có thể phản hồi về sản phẩm bất cứ lúc nào, chúng mình mong nhận được phản hồi từ các bạn.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-md-6">
+                            <div class="feature">
+                                <div class="icon">
+                                    <img src="/assets/client/images/return.svg" alt="Image" class="imf-fluid">
+                                </div>
+                                <h3>Hoàn trả hàng miễn phí</h3>
+                                <p>Nếu sản phẩm có vấn đề hãy gửi lại cho Lab.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-5">
+                    <div class="img-wrap">
+                        <img src="/assets/client/images/couch.jpg" alt="Image" class="img-fluid">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Why Choose Us Section -->
+
+   
+    <!-- End We Help Section -->
+
+    <!-- Start Popular Product -->
+    <div class="popular-product">
+        <div class="container">
+            <div class="row">
+
+                <div *ngFor="let spbc of sanphambanchay" class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-0">
+                    <div class="product-item-sm d-flex">
+                        <div class="thumbnail">
+                            <img src="/assets/client/images/{{ spbc.AnhSanPham }}" alt="Image" class="img-fluid">
+                        </div>
+                        <div class="pt-3">
+                            <h3>{{ spbc.TenSanPham }}</h3>
+                            <p>{{ spbc.Giong }} </p>
+                            <p><a href="./client/details/{{ spbc.SanPhamID }}">Chi Tiết</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- End Popular Product -->
+
+
+
+    <!-- Start Blog Section -->
+   
+    <!-- End Blog Section -->	
+
+
+	

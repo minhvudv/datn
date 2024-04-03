@@ -1,0 +1,82 @@
+<div class="breadcrumbs">
+    <!-- <div class="breadcrumbs-inner">
+        <div class="row m-0">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Table</a></li>
+                            <li class="active">Basic table</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+
+<div class="content">
+    <div class="animated fadeIn">
+        <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <strong class="card-title">Tài khoản</strong>
+                    <div class="ml-auto">
+                        <a href="#" class="btn btn-primary btn-sm" >
+                            <i class="fa fa-plus"></i> Thêm mới
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                   
+
+                    
+                    <table class="table">
+                        
+                        <thead class="thead-dark">
+                            <tr>
+                              <th scope="col">Stt</th>
+                              <th scope="col">Tên Người Dùng</th>
+                              <th scope="col">Tài Khoản</th>
+                              <th scope="col">Mật Khẩu</th>
+                              <th scope="col">Role</th>
+                              <th scope="col">Created_at</th>
+                              <th scope="col">Last_Login</th>
+                              <th scope="col">Thao Tác</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let acc of account, let i = index" >
+                            <th scope="row">{{ i + 1 }}</th>
+                            <td>{{ acc.username }}</td>
+                            <td>{{ acc.email }}</td>
+                            <td>{{ acc.password }}</td>
+                            <td>{{ acc.role }}</td>
+                            <td>{{ acc.creaed_at }}</td>
+                            <td>{{ acc.last_login }}</td>
+                            <td>
+                                <a href="#" >
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                                <button href=""  (click)="onXoa(acc.id)">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>  
+                    </tbody>
+                    </table>
+                
+            </div>
+        </div>
+    </div>
+</div>

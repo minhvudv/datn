@@ -1,0 +1,51 @@
+<!-- Start Hero Section -->
+<div class="hero">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5">
+                <div class="intro-excerpt">
+                    <h1>Coffee <br> and Life</h1>
+                    <p class="mb-4">"Chỉ là một người “nghiện” cà phê  và muốn chia sẻ cái sự “nghiện” ấy cho mọi người và mong những thông tin này có thể giúp mọi người có thể hiểu hơn về những loại cà phê trên toàn thế giới.!"</p>
+
+                    <p><a href="" class="btn btn-secondary me-2">Mua Ngay</a><a href="#" class="btn btn-white-outline">Khám Phá</a></p>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="hero-img-wrap">
+                    <img src="assets/client/images/couch1.jpg" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Hero Section -->
+
+
+
+<!-- Start Blog Section -->
+<div class="blog-section">
+<div class="container">
+    
+    <div class="row">
+
+        <div *ngFor="let tt of tintuc" class="col-12 col-sm-6 col-md-4 mb-5">
+            <div class="post-entry">
+                <a href="./client/blogdetails/{{ tt.BlogID }}" class="post-thumbnail"><img src="assets/client/images/{{ tt.AnhBlog }}" alt="Image" class="img-fluid"></a>
+                <div class="post-content-entry">
+                    <h3><a href="#">{{ tt.TenBlog }}</a></h3>
+                    <div class="meta">
+                        <span>{{ tt.TomTat }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+
+    </div>
+</div>
+</div>
+<!-- End Blog Section -->	
+
+
+

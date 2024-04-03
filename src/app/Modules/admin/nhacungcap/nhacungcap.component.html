@@ -1,0 +1,76 @@
+<div class="breadcrumbs">
+    <!-- <div class="breadcrumbs-inner">
+        <div class="row m-0">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Table</a></li>
+                            <li class="active">Basic table</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+
+<div class="content">
+    <div class="animated fadeIn">
+        <div class="row">
+        <div class="col-lg-8">
+            <div class="card">
+                <div class="card-header">
+                    <strong class="card-title">Nhà Cung Cấp</strong>
+                    <div class="ml-auto">
+                        <a href="#" class="btn btn-primary btn-sm" >
+                            <i class="fa fa-plus"></i> Thêm mới
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                   
+
+                    
+                    <table class="table">
+                        
+                        <thead class="thead-dark">
+                            <tr>
+                              <th scope="col">Stt</th>
+                              <th scope="col">Tên Nhà Cung Cấp</th>
+                              <th scope="col">Địa Chỉ</th>
+                              <th scope="col">Số Điện Thoại</th>
+                              <th scope="col">Thao Tác</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let ncc of cc, let i = index" >
+                            <th scope="row">{{ i + 1 }}</th>
+                            <td>{{ ncc.TenNCC }}</td>
+                            <td>{{ ncc.diachiNCC}}</td>
+                            <td>{{ ncc.SdtNCC }}</td>
+                            <td>
+                                <a href="#" >
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                                <a href="#" >
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>  
+                    </tbody>
+                    </table>
+                
+            </div>
+        </div>
+    </div>
+</div>

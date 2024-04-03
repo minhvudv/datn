@@ -1,0 +1,86 @@
+<div class="breadcrumbs">
+    <!-- <div class="breadcrumbs-inner">
+        <div class="row m-0">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Table</a></li>
+                            <li class="active">Basic table</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+
+<div class="content">
+    <div class="animated fadeIn">
+        <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <strong class="card-title">Blog</strong>
+                    <div class="ml-auto">
+                        <a href="./admin/themblog" class="btn btn-primary btn-sm" >
+                            <i class="fa fa-plus"></i> Thêm mới
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                   
+
+                    
+                    <table class="table">
+                        
+                        <thead class="thead-dark">
+                            <tr>
+                              <th scope="col">Stt</th>
+                              <th scope="col">Tên Blog</th>
+                              <th scope="col">Ảnh Blog</th>
+                              <th scope="col">Tóm Tắt</th>
+                              <th scope="col">Nội Dung</th>
+                              <th scope="col">Người Đăng</th>
+                              <th scope="col">Thao Tác</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let bl of tintuc| paginate:{itemsPerPage: 5, currentPage:p}; let i =index" >
+                            <th scope="row">{{ i + 1 }}</th>
+                            <td>{{ bl.TenBlog }}</td>
+                            <td> <img src="/assets/client/images/{{ bl.AnhBlog }}" ></td>
+                            <td>{{ bl.TomTat }}</td>
+                            <td>{{ bl.NoiDung }}</td>
+                            <td>{{ bl.NguoiDang }}</td>
+                            <td>
+                                <a href="./admin/suablog/{{bl.BlogID}}"  >
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                                <button href=""  (click)="onXoa(bl.BlogID)">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>  
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="6">
+                                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                            </td>
+                        </tr>
+                    </tfoot>
+                    </table>
+            </div>
+        </div>
+    </div>
+</div>

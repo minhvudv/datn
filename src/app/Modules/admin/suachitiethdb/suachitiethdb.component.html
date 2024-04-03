@@ -1,0 +1,32 @@
+<div class="col-lg-8 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <strong>Thêm Sản Phẩm</strong> 
+        </div>
+        <div class="card-body card-block">
+            <form  method="put" [formGroup]="suacthdb" (submit)="onUpdatecthdb()">
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="Slban" >Số Lượng</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="Slban" formControlName="Slban" placeholder="Slban" class="form-control"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="DGban" >Đơn Gía</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="DGban" formControlName="DGban" placeholder=" DGban" class="form-control"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="SanPhamID" >Mã Sản Phẩm</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="SanPhamID" formControlName="SanPhamID" placeholder=" SanPhamID" class="form-control"></div>
+                </div>
+                
+            
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="TenSanPham" >Tên Sản Phẩm</label></div>
+                    <div class="col-12 col-md-9"><textarea formControlName="TenSanPham" id="TenSanPham" rows="9" placeholder="TenSanPham." class="form-control"></textarea></div>
+                </div>
+            
+                <div class="form-group text-right">
+                    <button type="submit" class="btn btn-primary">Sửa</button>
+                </div>
+            </form>
+        </div>
+    </div>

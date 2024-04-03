@@ -1,0 +1,130 @@
+		<!-- Start Hero Section -->
+        <div class="hero">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-lg-5">
+                        <div class="intro-excerpt">
+                            <h1>Giỏ Hàng</h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- End Hero Section -->
+
+    
+
+   <div *ngIf="carts.length">
+    <div class="untree_co-section before-footer-section">
+      <div class="container">
+        <div class="row mb-5">
+          <form class="col-md-12" method="post">
+            <div class="site-blocks-table">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th class="product-thumbnail">Ảnh</th>
+                    <th class="product-name">Tên Sản Phẩm</th>
+                    <th class="product-price">Giá Bán</th>
+                    <th class="product-quantity">Số Lượng</th>
+                    <th class="product-total">Tổng Tiền</th>
+                    <th class="product-remove"></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let cart of carts, let i=index">
+                    <td class="product-thumbnail">
+                      <img src="assets/client/images/{{ cart.img }}" alt="Image" class="img-fluid">
+                    </td>
+                    <td class="product-name">
+                      <h2 class="h5 text-black">{{ cart.name }}</h2>
+                    </td>
+                    <td > {{ cart.price | number :'1.0-0' }}</td>
+                    <td>
+                      <input (change)="updateQuantity(i, $event )" type="number" [value]="cart.quantity" style="width: 60px;text-align: center;">
+                    </td>
+                    <td>{{ subtotal(cart) | number :'1.0-0' }}</td>
+                    <td>
+                      <button  class="btn btn-black btn-sm" (click)="removecart(i)">X</button>
+                    </td>
+                  </tr>
+  
+                  
+                </tbody>
+              </table>
+            </div>
+          </form>
+        </div>
+  
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row mb-5">
+              
+              <div class="col-md-6">
+                <a href="./client/Home"><button class="btn btn-outline-black btn-sm btn-block">Tiếp Tục Mua Sắm</button></a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <label class="text-black h4" for="coupon">Mã Giảm Giá</label>
+                <p>Nhập vào mã giảm giá của bạn.</p>
+              </div>
+              <div class="col-md-8 mb-3 mb-md-0">
+                <input type="text" class="form-control py-3" id="coupon" placeholder="Coupon Code">
+              </div>
+              <div class="col-md-4">
+                <button class="btn btn-black">Xác Nhận</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 pl-5">
+            <div class="row justify-content-end">
+              <div class="col-md-7">
+                <div class="row">
+                  <div class="col-md-12 text-right border-bottom mb-5">
+                    <h3 class="text-black h4 text-uppercase">Tổng Thanh Toán</h3>
+                  </div>
+                </div>
+                <div class="row mb-3">
+                  <div class="col-md-6">
+                    <span class="text-black">Tổng Số Lượng </span>
+                  </div>
+                  <div class="col-md-6 text-right">
+                    <strong class="text-black">{{ totalQuantity }}</strong>
+                  </div>
+                </div>
+                <div class="row mb-5">
+                  <div class="col-md-6">
+                    <span class="text-black">Tổng Tiền</span>
+                  </div>
+                  <div class="col-md-6 text-right">
+                    <strong class="text-black">{{ totalPrice | number:'1.0-0' }} vnđ</strong>
+                  </div>
+                </div>
+  
+                <div class="row">
+                  <div class="col-md-12">
+                    <button class="btn btn-black btn-lg py-3 btn-block" onclick="window.location='./client/checkout'">Thanh Toán khi nhận hàng</button>
+                  </div>
+                </div> <br>
+                <div class="row">
+                  <div class="col-md-12">
+                    <button class="btn btn-black btn-lg py-3 btn-block"  onclick="window.location='#'">Thanh toán VNPay</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+   
+   <div class="alert container"*ngIf="carts.length == 0">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <strong>Không có gì trong giỏ hàng!</strong> <a href="./client/Home">Tiếp tục mua sắm</a>
+   </div>
+   

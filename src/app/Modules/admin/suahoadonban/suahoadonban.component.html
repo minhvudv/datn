@@ -1,0 +1,36 @@
+<div class="col-lg-8 mx-auto">
+    <div class="card">
+        <div class="card-header">
+            <strong>Thêm Sản Phẩm</strong> 
+        </div>
+        <div class="card-body card-block">
+            <form  method="put" [formGroup]="suahdb" (submit)="onUpdatehdb()">
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="HoTen" >Họ Tên</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="HoTen" formControlName="HoTen" placeholder="HoTen" class="form-control"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="DiaChi" >Địa Chỉ</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="DiaChi" formControlName="DiaChi" placeholder=" DiaChi" class="form-control"></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="Sdt" >Số Điện Thoại</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="Sdt" formControlName="Sdt" placeholder=" Sdt" class="form-control"></div>
+                </div>
+                
+            
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="Email" >Email</label></div>
+                    <div class="col-12 col-md-9"><textarea formControlName="Email" id="Email" rows="9" placeholder="Email." class="form-control"></textarea></div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="ghichu" >Ghi Chú</label></div>
+                    <div class="col-12 col-md-9"><input type="text" id="ghichu" formControlName="ghichu" placeholder=" ghichu" class="form-control"></div>
+                </div>
+            
+                <div class="form-group text-right">
+                    <button type="submit" class="btn btn-primary">Sửa</button>
+                </div>
+            </form>
+        </div>
+    </div>

@@ -1,0 +1,63 @@
+<div id="container" style="width:100%; min-height:700px; background-color:#FFF;">
+    <div id="container1" style="width:100%; min-height:100px; background-color:#FFF;">
+        <div style="width:100%; min-height:50px; border-bottom:1px solid #DDD;margin-top:15px">
+            <div class="menu-product" > 
+                <!-- <nav>
+                    <ul class="mn-product" >
+                        <li><a href="index.html">Trang chủ / </a></li>
+                        <li><a href="YSL.html">By kilian / </a></li>
+                        <li>Black Phantom</li>
+                    </ul>
+                </nav> -->
+            </div>
+        </div>
+    </div>	
+    <div id="container2" style="width:1200px;min-height:800px;;margin:0px auto; border-bottom:1px solid #DDD" >
+        <div id="content-left">
+            <img style="width:450px; height:450px;margin-left:50px"src="assets/client/images/{{ productdetails.AnhSanPham }}">
+            <h1 class="mota" style="padding-right:530px;"></h1>
+            <span>
+        <br>—
+LIFE IS LIKE A HUGE LAB, DO NOT BE AFRAID OF A FEW TINY EXPLOSIONS!
+#monocoffeelab #monoteam #monocoffeeroaster
+MONO Coffee Roaster là xưởng rang cà phê được hình thành từ năng lượng và tâm hồn của những người trẻ, những người mong muốn được uống một tách cà phê ngon. Ở đây, nguồn lực của đội ngũ là niềm vui, sự hài lòng sau mỗi trải nghiệm của bạn, vậy nên có điều gì chúng tôi có thể làm cho bạn hạnh phúc hãy chia sẻ đừng ngại!
+            </span>
+        </div>
+        <div id="content-right">
+            <div class="name-product">
+                
+                <h1 class="mota" style="font-size:40px;float:left;">{{ productdetails.TenSanPham }}</h1>
+            </div>
+            
+            <div class="price-product">
+                <span style="font-size:23px;float:left;font-weight:bold;">{{ productdetails.GiaBan | number: '1.0-0' }} vnđ</span>
+            </div>
+            
+            <div class="detail">
+                <div id="info">
+                    <span style="float:left;"><b>Giống cây:</b> {{ productdetails.Giong }}</span>
+                    
+                </div>
+                <div id="info">
+                    <span style="float:left;"><b>Phương pháp sơ chế:</b>{{productdetails.PhuongPhapSoChe}} </span>
+                   
+                </div>
+                <div id="info">
+                    <span style="float:left;"><b>Độ cao trồng:</b> {{ productdetails.DoCaoTrong }} m</span>
+                </div>
+                <div id="info">
+                    <span style="float:left;"><b>Mức rang:</b> {{ productdetails.MucRang }}</span>
+                </div>
+                <div id="info">
+                    <span style="float:left;"><b>Hương vị:</b> {{ productdetails.HuongVi }}</span>
+                </div>
+                <div id="info">
+                    <span style="float:left;"><b>Công thức đề xuất:</b> Sản phẩm đã có công thức trên bao bì</span>
+                </div>
+            </div>
+            <button class="btnaddToCart" type="button" value="" (click)="onAddTocart(productdetails)">Thêm Vào Giỏ Hàng</button>
+            
+        </div>
+    </div>
+    
+</div>

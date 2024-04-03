@@ -1,0 +1,94 @@
+<div class="breadcrumbs">
+    <!-- <div class="breadcrumbs-inner">
+        <div class="row m-0">
+            <div class="col-sm-4">
+                <div class="page-header float-left">
+                    <div class="page-title">
+                        <h1>Dashboard</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="page-header float-right">
+                    <div class="page-title">
+                        <ol class="breadcrumb text-right">
+                            <li><a href="#">Dashboard</a></li>
+                            <li><a href="#">Table</a></li>
+                            <li class="active">Basic table</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+
+<div class="content">
+    <div class="animated fadeIn">
+        <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    <strong class="card-title">Sản Phẩm</strong>
+                    <div class="ml-auto">
+                        <a href="./admin/themsanpham" class="btn btn-primary btn-sm" >
+                            <i class="fa fa-plus"></i> Thêm mới
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card-body">
+                   
+
+                    <table class="table">
+                        
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Stt</th>
+                              <th scope="col">Loại Sản Phẩm</th>
+                              <th scope="col">Tên Sản Phẩm</th>
+                              <th scope="col">Ảnh Sản Phẩm</th>
+                              <th scope="col">Giá Bán</th>
+                              <th scope="col">Giống Cây</th>
+                              <th scope="col">Phương Pháp Sơ Chế</th>
+                              <th scope="col">Độ Cao Trồng</th>
+                              <th scope="col">Mức rang</th>
+                              <th scope="col">Hương Vị</th>
+                              <th scope="col">Thao Tác</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                        <tr *ngFor="let sp of items | paginate:{itemsPerPage: 5, currentPage:p}; let i =index" > 
+                            <td>{{ i+1 }}</td>
+                            <td>{{ sp.LoaiHangID }}</td>
+                            <td>{{ sp.TenSanPham }}</td>
+                            <td> <img src="/assets/client/images/{{ sp.AnhSanPham }} " class="fixed-size-image"></td>
+                            <td>{{ sp.GiaBan | number:'1.0-0' }}</td>
+                            <td>{{ sp.Giong }}</td>
+                            <td>{{ sp.PhuongPhapSoChe }}</td>
+                            <td>{{ sp.DoCaoTrong }}</td>
+                            <td>{{ sp.MucRang }}</td>
+                            <td>{{ sp.HuongVi }}</td>
+                            <td>
+                                <a href="./admin/suasanpham/{{sp.SanPhamID}}"  >
+                                    <i class="fa fa-edit"></i>
+                                </a>
+                                <button href=""  (click)="onXoa(sp.SanPhamID)">
+                                    <i class="fa fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>  
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="6">
+                                <pagination-controls (pageChange)="p = $event"></pagination-controls>
+                            </td>
+                        </tr>
+                    </tfoot>
+                    </table>
+                
+            </div>
+        </div>
+    </div>
+</div>

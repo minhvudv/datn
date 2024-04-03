@@ -1,0 +1,13 @@
+<div class="container ">
+    <div class="blog-post">
+        <img src="assets/client/images/{{ blogdetails.AnhBlog }}" alt="Blog Image" class="img-fluid">
+        <h2 class="display-4">{{ blogdetails.TenBlog }}</h2>
+        <p><em class="text-muted">Ngày Đăng: {{ blogdetails.created_at }}</em></p>
+        <p><em class="text-muted">Người Đăng: {{ blogdetails.NguoiDang }}</em></p>
+        <p class="lead">
+            
+           {{ blogdetails.TomTat }}
+        </p>
+        <div [innerHTML]="blogdetails.NoiDung"></div>
+    </div>
+</div>

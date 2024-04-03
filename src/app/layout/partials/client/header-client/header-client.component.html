@@ -1,0 +1,79 @@
+<!-- Start Header/Navigation -->
+<nav class="custom-navbar  navbar-expand-md " arial-label="Furni navigation bar">
+
+    <div class="container">
+        
+  
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button> -->
+  
+        <div class="collapse navbar-collapse" id="navbarsFurni"     >
+            <a class="navbar-brand" href="./client/Home" >MonoLab<span>.</span></a>
+            <ul   class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+                <!-- <a class="navbar-brand" href="./client/Home" >MonoLab<span>.</span></a> -->
+                <!-- <li class="nav-item active"> -->
+                <li>
+                    <a class="nav-link" href="./client/Home">Trang Chủ</a>
+                </li>
+                <li  class="submenu">
+                    <a class="nav-link" href="./client/shop">Cửa Hàng</a>
+                    <!-- Danh sách con -->
+                    <ul >
+                      <li *ngFor="let lsp of loaisp"><a href="./client/loaisp/{{ lsp.LoaiHangID }}">{{ lsp.TenLH }}</a></li>
+                     
+                    </ul>
+                  </li>
+
+                
+                <li><a class="nav-link" href="./client/about">Giới Thiệu</a></li>
+                <li><a class="nav-link" href="./client/blog">Blog</a></li>
+                <li><a class="nav-link" href="./client/contact">Liên Hệ</a></li>
+            </ul>
+  
+            <div class="navbar align-self-center d-flex">
+              <!-- <div class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3">
+                  <div class="input-group">
+                      <input type="text" class="form-control" id="inputMobileSearch" placeholder="Search ...">
+                      <div class="input-group-text">
+                          <i class="fa fa-fw fa-search"></i>
+                      </div>
+                  </div>
+              </div> -->
+              <a class="nav-icon d-none d-lg-inline" href="#" data-bs-toggle="modal" data-bs-target="#templatemo_search">
+                  <i class="fa fa-fw fa-search text-dark mr-2"></i>
+                 
+              </a>
+              <a class="nav-icon position-relative text-decoration-none" href="./client/cart">
+                  <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+              </a>
+              <!-- <a class="nav-icon position-relative text-decoration-none" href="">
+                  <i class="fa fa-fw fa-user text-dark mr-3"></i>
+                  <div class="user-menu dropdown-menu">
+                    <a class="nav-link" href="#"><i class="fa fa- user"></i>Trang cá nhân</a>
+
+                    <a class="nav-link" href="#"><i class="fa fa- user"></i>Thông báo <span class="count"></span></a>
+
+                    <a class="nav-link" href="#"><i class="fa fa -cog"></i>Cài đặt</a>
+
+                    <a class="nav-link" href="#"><i class="fa fa-power -off"></i>Đăng xuất</a>
+                </div>
+              </a> -->
+              <div  class="nav-icon position-relative text-decoration-none">
+                <a href="#" class="fa fa-fw fa-user text-dark mr-3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                </a>
+                <div class="user-menu dropdown-menu text-dark">
+                    <a class="nav-link text-dark" href="#"><i class="fa fa- user"></i>Trang cá nhân</a>
+
+                    <a class="nav-link text-dark" href="#"><i class="fa fa -cog"></i>Cài đặt</a>
+                    <a class="nav-link text-dark" href="./client/login" *ngIf="!isLogin">Đăng nhập</a>
+                    <a class="nav-link text-dark" href=""  *ngIf="isLogin"> {{ isLogin[0].username }}</a>
+                    <a class="nav-link text-dark" href="" (click)="onLogout()" *ngIf="isLogin">Đăng xuất</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+        
+  </nav>
+  <!-- End Header/Navigation -->
