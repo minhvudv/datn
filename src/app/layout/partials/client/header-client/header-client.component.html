@@ -21,9 +21,8 @@
                     <!-- Danh sách con -->
                     <ul >
                       <li *ngFor="let lsp of loaisp"><a href="./client/loaisp/{{ lsp.LoaiHangID }}">{{ lsp.TenLH }}</a></li>
-                     
                     </ul>
-                  </li>
+                </li>
 
                 
                 <li><a class="nav-link" href="./client/about">Giới Thiệu</a></li>
@@ -65,10 +64,10 @@
                 <div class="user-menu dropdown-menu text-dark">
                     <a class="nav-link text-dark" href="#"><i class="fa fa- user"></i>Trang cá nhân</a>
 
-                    <a class="nav-link text-dark" href="#"><i class="fa fa -cog"></i>Cài đặt</a>
-                    <a class="nav-link text-dark" href="./client/login" *ngIf="!isLogin">Đăng nhập</a>
-                    <a class="nav-link text-dark" href=""  *ngIf="isLogin"> {{ isLogin[0].username }}</a>
-                    <a class="nav-link text-dark" href="" (click)="onLogout()" *ngIf="isLogin">Đăng xuất</a>
+                    <a class="nav-link text-dark" href="./client/orders"><i class="fa fa -cog"></i>Đơn Mua</a>
+                    <a class="nav-link text-dark" href="./client/login" *ngIf="!account">Đăng nhập</a>
+                    <a class="nav-link text-dark" href=""  *ngIf="account"> {{ account.username }}</a>
+                    <a class="nav-link text-dark" href="" (click)="onLogout()" *ngIf="account">Đăng xuất</a>
                 </div>
             </div>
           </div>

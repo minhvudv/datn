@@ -15,6 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BlogdetailsComponent } from './blogdetails/blogdetails.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { OrdersComponent } from './orders/orders.component';
 @NgModule({
     declarations:[
     HomeComponent,
@@ -28,7 +29,8 @@ import { SignupComponent } from './signup/signup.component';
     CheckoutComponent,
     BlogdetailsComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    OrdersComponent
   ],
     imports:[
         CLientRoutingModule,

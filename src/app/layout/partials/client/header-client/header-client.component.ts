@@ -12,9 +12,15 @@ export class HeaderClientComponent implements OnInit {
   isLogin :any;
 
   loaisp: any[]=[];
-  
+  account :any;
 
-  ngOnInit() : void{
+  ngOnInit( ) : void{
+    let storage = sessionStorage.getItem('userInfo');
+
+    if (storage) {
+      this.account = JSON.parse(storage);
+    }
+
     this.loaihang.getlsp().subscribe(res=>{
       
       this.loaisp =res;
@@ -27,5 +33,6 @@ export class HeaderClientComponent implements OnInit {
     sessionStorage.clear();
     location.reload();
   }
+  
   
 }
