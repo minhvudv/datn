@@ -31,8 +31,8 @@
                       </thead>
                       <tbody *ngFor="let tt of ck, ">
                         <tr>
-                          <td>{{ tt.name }} <strong class="mx-2">x</strong> {{ tt.quantity }}</td>
-                          <td>{{ tt.price | number :'1.0-0' }} vnđ</td>
+                          <td formControlName="name"> {{ tt.name }} <strong class="mx-2">x</strong> {{ tt.quantity }}</td>
+                          <td formControlName="price">{{ tt.price | number :'1.0-0' }} vnđ</td>
                         </tr>
                       </tbody>
                       <tfoot>

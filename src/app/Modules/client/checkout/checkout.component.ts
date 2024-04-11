@@ -26,6 +26,7 @@ export class CheckoutComponent {
     Email: new FormControl('', [Validators.required, Validators.email]),
     Sdt: new FormControl('', [Validators.required, Validators.maxLength(11)]),
     ghichu: new FormControl(''),
+ 
   });
 
   constructor(private getdataService: ClientGetDataService) {}
